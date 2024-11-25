@@ -30,8 +30,8 @@
       "group": "Get Started",
       "pages": [
         "introduction",
-        "quickstart",
-        "development"
+        "customization",
+        "open-source"
       ]
     },
     {
