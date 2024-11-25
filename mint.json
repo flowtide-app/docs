@@ -30,8 +30,8 @@
       "group": "Get Started",
       "pages": [
         "introduction",
-        "customization",
-        "open-source"
+        "customize",
+        "development"
       ]
     },
     {
@@ -61,8 +61,6 @@
     }
   ],
   "footerSocials": {
-    "x": "https://x.com/mintlify",
-    "github": "https://github.com/mintlify",
-    "linkedin": "https://linkedin.com/company/mintlify"
+    "github": "https://github.com/thingbomb"
   }
 }
