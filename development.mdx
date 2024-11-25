@@ -1,106 +1,72 @@
 ---
-title: 'Development'
-description: 'Preview changes locally to update your docs'
+title: "Development"
+description: "Build Flowtide from source and contribute"
 ---
 
 <Info>
-  **Prerequisite**: Please install Node.js (version 19 or higher) before proceeding.
+  **Prerequisites**: [Git](https://git-scm.com/) and [PNPM](https://pnpm.io)
 </Info>
 
-Follow these steps to install and run Mintlify on your operating system:
+## Building the app
 
-**Step 1**: Install Mintlify:
+Follow these steps to build Flowtide from source on your system:
+
+**Step 1**: Clone the repository with Git:
 
 <CodeGroup>
-
-  ```bash npm
-  npm i -g mintlify
+  ```bash http
+  git clone https://github.com/thingbomb/flowtide
   ```
 
-```bash yarn
-yarn global add mintlify
-```
-
+  ```bash ssh
+  git clone git@github.com:thingbomb/flowtide.git
+  ```
 </CodeGroup>
 
-**Step 2**: Navigate to the docs directory (where the `mint.json` file is located) and execute the following command:
+**Step 2**: Install the packages with [PNPM](https://pnpm.io):
 
 ```bash
-mintlify dev
+pnpm install
 ```
 
-A local preview of your documentation will be available at `http://localhost:3000`.
-
-### Custom Ports
-
-By default, Mintlify uses port 3000. You can customize the port Mintlify runs on by using the `--port` flag. To run Mintlify on port 3333, for instance, use this command:
+**Step 3**: Build the app:
 
 ```bash
-mintlify dev --port 3333
+pnpm build-only
 ```
 
-If you attempt to run Mintlify on a port that's already in use, it will use the next available port:
+Check the `dist` folder for the app. To make it compatible with Firefox, remove the `background.js` file and remove the `background` key from the `manifest.json`.
 
-```md
-Port 3000 is already in use. Trying 3001 instead.
-```
+## Running the code on Chrome
 
-## Mintlify Versions
+Once you have completed your build, go to `chrome://extensions` in your Chromium-based browser and select "Load unpacked". Select the `dist` folder and you're done. Open a new tab to see the result.
 
-Please note that each CLI release is associated with a specific version of Mintlify. If your local website doesn't align with the production version, please update the CLI:
+<Info>
+  Developer mode must be enabled for "Load unpacked" to work
+</Info>
+
+## Running the code on Firefox
+
+Once you have completed your build and modified it for Firefox compatibility, convert those files into a ZIP archive. Once done, go to `about:addons` in your Gecko-based browser. Select "Install Add-on from file..." and select the ZIP archive. You should be done. Open a new tab to see the result.
+
+# Contributing
+
+Head on over to our [GitHub repository](https://github.com/thingbomb/flowtide) and fork it. Clone the repo on your local machine and start developing.
+
+To turn on watching to build whenever you save, run:
 
 <CodeGroup>
+  ```bash pnpm
+  pnpm dev
+  ```
 
-```bash npm
-npm i -g mintlify@latest
-```
+  ```bash npm
+  npm run dev
+  ```
 
-```bash yarn
-yarn global upgrade mintlify
-```
-
+  ```bash bun
+  bun dev
+  ```
 </CodeGroup>
 
-## Validating Links
-
-The CLI can assist with validating reference links made in your documentation. To identify any broken links, use the following command:
-
-```bash
-mintlify broken-links
-```
-
-## Deployment
-
-<Tip>
-  Unlimited editors available under the [Pro
-  Plan](https://mintlify.com/pricing) and above.
-</Tip>
-
-If the deployment is successful, you should see the following:
-
-<Frame>
-  <img src="/images/checks-passed.png" style={{ borderRadius: '0.5rem' }} />
-</Frame>
-
-## Code Formatting
-
-We suggest using extensions on your IDE to recognize and format MDX. If you're a VSCode user, consider the [MDX VSCode extension](https://marketplace.visualstudio.com/items?itemName=unifiedjs.vscode-mdx) for syntax highlighting, and [Prettier](https://marketplace.visualstudio.com/items?itemName=esbenp.prettier-vscode) for code formatting.
-
-## Troubleshooting
-
-<AccordionGroup>
-  <Accordion title='Error: Could not load the "sharp" module using the darwin-arm64 runtime'>
-
-    This may be due to an outdated version of node. Try the following:
-    1. Remove the currently-installed version of mintlify: `npm remove -g mintlify`
-    2. Upgrade to Node v19 or higher.
-    3. Reinstall mintlify: `npm install -g mintlify`
-  </Accordion>
-
-  <Accordion title="Issue: Encountering an unknown error">
-  
-    Solution: Go to the root of your device and delete the \~/.mintlify folder. Afterwards, run `mintlify dev` again.
-  </Accordion>
-</AccordionGroup>
-
-Curious about what changed in the CLI version? [Check out the CLI changelog.](https://www.npmjs.com/package/mintlify?activeTab=versions)
+Follow the same steps in the 'Building the app' section to develop. Once you are done making your changing, push them to GitHub, and file a pull request.
