@@ -37,10 +37,13 @@
     {
     "group": "Install Guides",
     "pages": [
+      "install-guides/chrome",
+      "install-guides/edge",
+      "install-guides/brave",
       "install-guides/vivaldi",
       "install-guides/arc",
     ]
-    }
+    },
     {
       "group": "Customizables",
       "pages": [
