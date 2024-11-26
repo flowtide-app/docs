@@ -35,6 +35,13 @@
       ]
     },
     {
+    "group": "Install Guides",
+    "pages": [
+      "install-guides/vivaldi",
+      "install-guides/arc",
+    ]
+    }
+    {
       "group": "Customizables",
       "pages": [
         "customizables/todos",
