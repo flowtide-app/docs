@@ -39,7 +39,9 @@
       "pages": [
         "customizables/mantras",
         "customizables/theme",
-        "customizables/font"
+        "customizables/font",
+        "customizables/background",
+        "customizables/wallpaper-refresh-time"
       ]
     }
   ],
