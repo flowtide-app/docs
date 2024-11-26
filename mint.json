@@ -42,7 +42,8 @@
         "customizables/font",
         "customizables/background",
         "customizables/wallpaper-refresh-time",
-        "customizables/clock-format"
+        "customizables/clock-format",
+        "customizables/clock-size"
       ]
     }
   ],
