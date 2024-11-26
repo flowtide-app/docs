@@ -39,6 +39,7 @@
       "pages": [
         "customizables/todos",
         "customizables/mantras",
+        "customizables/bookmarks",
         "customizables/theme",
         "customizables/font",
         "customizables/background",
