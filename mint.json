@@ -1,6 +1,6 @@
 {
   "$schema": "https://mintlify.com/schema.json",
-  "name": "Flowtide",
+  "name": "Flowtide Docs",
   "logo": {
     "dark": "/flowtide-logo.png",
     "light": "/flowtide-logo.png"
