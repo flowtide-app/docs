@@ -38,7 +38,8 @@
       "group": "Customizables",
       "pages": [
         "customizables/mantras",
-        "customizables/theme"
+        "customizables/theme",
+        "customizables/font"
       ]
     }
   ],
