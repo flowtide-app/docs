@@ -59,5 +59,8 @@
   ],
   "footerSocials": {
     "github": "https://github.com/thingbomb"
+  },
+  "feedback": {
+  "thumbsRating": true
   }
 }
