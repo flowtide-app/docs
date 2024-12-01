@@ -42,6 +42,12 @@
     ]
     },
     {
+      "group": "Magic Search",
+      "pages": [
+        "magic-search/overview"
+      ]
+    },
+    {
       "group": "Customizables",
       "pages": [
         "customizables/todos",
