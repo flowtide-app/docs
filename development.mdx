@@ -4,7 +4,7 @@ description: "Build Flowtide from source and contribute"
 ---
 
 <Info>
-  **Prerequisites**: [Git](https://git-scm.com/) and [PNPM](https://pnpm.io)
+  **Prerequisites**: [Git](https://git-scm.com/), [PNPM](https://pnpm.io), and [Chrome (for development)](https://google.com/chrome)
 </Info>
 
 ## Building the app
@@ -31,9 +31,15 @@ pnpm install
 
 **Step 3**: Build the app:
 
-```bash
-pnpm build-only
-```
+<CodeGroup>
+  ```bash chrome
+  pnpm build:chrome
+  ```
+
+  ```bash firefox
+  pnpm build:firefox
+  ```
+</CodeGroup>
 
 Check the `dist` folder for the app. To make it compatible with Firefox, remove the `background.js` file and remove the `background` key from the `manifest.json`.
 
@@ -47,7 +53,7 @@ Once you have completed your build, go to `chrome://extensions` in your Chromium
 
 ## Running the code on Firefox
 
-Once you have completed your build and modified it for Firefox compatibility, convert those files into a ZIP archive. Once done, go to `about:addons` in your Gecko-based browser. Select "Install Add-on from file..." and select the ZIP archive. You should be done. Open a new tab to see the result.
+Once you have completed your Firefox build, zip up the `dist` folder. Once done, go to `about:addons` in your Gecko-based browser. Select "Install Add-on from file..." and select the ZIP archive. You should be done. Open a new tab to see the result.
 
 # Contributing
 
